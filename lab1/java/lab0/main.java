@@ -15,7 +15,7 @@ class lab0 {
 	}
 
 	    public static String swapCase(String str) {
-        StringBuffer buffer = new StringBuffer(strLen);
+        StringBuffer buffer = new StringBuffer(str.length());
 
         char ch = 0;
         for (int i = 0; i < str.length(); i++) {
