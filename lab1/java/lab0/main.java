@@ -5,7 +5,7 @@ class lab0 {
 	public static void my_printf(String format_string, String param){
 		for(int i=0;i<format_string.length();i++){
 			if((format_string.charAt(i) == '#') && (format_string.charAt(i+1) == 'k')){
-				System.out.print(param);
+				System.out.print(swapCase(param));
 				i++;
 			}else{
 				System.out.print(format_string.charAt(i));
@@ -13,6 +13,25 @@ class lab0 {
 		}
 		System.out.println("");
 	}
+
+	    public static String swapCase(String str) {
+        StringBuffer buffer = new StringBuffer(strLen);
+
+        char ch = 0;
+        for (int i = 0; i < str.length(); i++) {
+            ch = str.charAt(i);
+            if (Character.isUpperCase(ch)) {
+                ch = Character.toLowerCase(ch);
+            } else if (Character.isTitleCase(ch)) {
+                ch = Character.toLowerCase(ch);
+            } else if (Character.isLowerCase(ch)) {
+                ch = Character.toUpperCase(ch);
+            }
+            buffer.append(ch);
+        }
+        return buffer.toString();
+    }
+
 	public static void main(String[] args) throws IOException {
 		//System.out.println("Hello, World!"); 
 		BufferedReader bufferReader=new BufferedReader(new InputStreamReader(System.in));
