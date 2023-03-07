@@ -1,5 +1,18 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
+
+void print_swapcase(const char * string, int length) {
+	for(int i = 0; i < length; i++) {
+		if(islower(string[i])) {
+			putchar(toupper(string[i]));	
+		} else if(isupper(string[i])) {
+			putchar(tolower(string[i]));
+		} else {
+			putchar(string[i]);
+		}
+	}
+}
 
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
