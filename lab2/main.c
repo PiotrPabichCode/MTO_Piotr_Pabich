@@ -6,7 +6,7 @@ int validate_format(const char * string, int * len) {
 	if(strlen(string) < 4) {
 		return -1;
 	}
-	int i = 0;
+	int i = 1;
 	char dot = string[i++];
 	if(dot != '.') {
 		return -1;
