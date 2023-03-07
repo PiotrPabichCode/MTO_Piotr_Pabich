@@ -33,7 +33,7 @@ int validate_format(const char * string, int * len) {
 }
 
 void print_swapcase(const char * string, int length) {
-	for(int i = 0; i < length; i++) {
+	for(int i = 0; i < strlen(string) && i < length; i++) {
 		if(islower(string[i])) {
 			putchar(toupper(string[i]));	
 		} else if(isupper(string[i])) {
