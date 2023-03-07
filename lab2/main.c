@@ -2,6 +2,36 @@
 #include <string.h>
 #include <ctype.h>
 
+int validate_format(const char * string, int * len) {
+	if(strlen(string) < 4) {
+		return -1;
+	}
+	int i = 0;
+	char dot = string[i++];
+	if(dot != '.') {
+		return -1;
+	}
+
+	int counter = 0;
+	char buff[1024] = {0};	
+	char tmp;
+	for(;;) {
+		tmp = string[i++];
+		if(isdigit(tmp)) {
+			buff[counter++] = tmp;
+		} else {
+			break;
+		}
+	}
+	if(tmp != 'k' || counter == 0) {
+		return -1;
+	}
+	int value;
+	sscanf(buff, "%d", &value);
+	*len = counter;
+	return value;
+}
+
 void print_swapcase(const char * string, int length) {
 	for(int i = 0; i < length; i++) {
 		if(islower(string[i])) {
