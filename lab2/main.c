@@ -46,11 +46,31 @@ void print_swapcase(const char * string, int length) {
 
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
-		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
+		int valid = 0;
+		// print all parameter
+		if((format_string[i] == '#') && (format_string[i+1] == 'k')) {
 			i++;
-			printf("%s",param);
-		}else
+			print_swapcase(param, strlen(param));
+			continue;
+		}
+		// print max k-len parameter 
+		if((format_string[i] == '#')){
+			char tmp_buff[1024] = {0};
+			char * tmp_string = format_string + i;
+			strcpy(tmp_buff, tmp_string);
+			int len = 0;
+			int length = validate_format(tmp_buff, &len);
+			if(length > 0) {
+				print_swapcase(param, length);
+				valid = 1;
+				i += len + 2;
+			}
+			
+		}
+		// display single char
+		if(!valid) {
 			putchar(format_string[i]);
+		}
 	}
 	puts("");
 	return 0;
