@@ -1,9 +1,9 @@
 wielka litera na poczatku #.3k
 Something
-wielka litera na koncu #.2k
+wielka litera na koncu #k
 somethinG
 wielkie litery losowo #.2k
-SLoWo
+SloWo
 # k nieprawidlowy format
 TaK
 prawidlowy #k format w srodku
