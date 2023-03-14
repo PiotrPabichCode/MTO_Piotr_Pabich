@@ -2,9 +2,22 @@
 #include <string.h>
 
 int validate_format(const char * string, int * width, int * precision) {
+	char dot, endpoint;
+	int res = sscanf(string, "%c", &endpoint); // #k
+	if(res == 1) {
+		if(endpoint == 'k') {
+			return 1;
+		}
+	}
+	res = sscanf(string, "%c%d%c", &dot, precision, &endpoint); // #.10k
+	if(res == 3) {
+		if(dot == '.' && *precision > 0 && endpoint == 'k') {
+			return 2;
+		}
+	}
 
+	return -1;
 }
-
 void print_swapcase(const char * string, int width, int precision) {
 	for(int i = 0; i < strlen(string) && i < precision; i++) {
 		if(islower(string[i])) {
