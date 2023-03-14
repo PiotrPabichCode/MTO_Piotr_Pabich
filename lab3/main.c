@@ -1,6 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 
+int validate_format(const char * string, int * width, int * precision) {
+
+}
+
+void print_swapcase(const char * string, int width, int precision) {
+	for(int i = 0; i < strlen(string) && i < precision; i++) {
+		if(islower(string[i])) {
+			putchar(toupper(string[i]));	
+		} else if(isupper(string[i])) {
+			putchar(tolower(string[i]));
+		} else {
+			putchar(string[i]);
+		}
+	}
+}
+
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'k')){

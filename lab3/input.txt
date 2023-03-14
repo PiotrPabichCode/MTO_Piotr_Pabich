@@ -1,0 +1,20 @@
+wielka litera na poczatku #.3k
+Something
+wielka litera na koncu #k
+somethinG
+wielkie litery losowo #.2k
+SloWo
+# k nieprawidlowy format
+TaK
+prawidlowy #k format w srodku
+TUTAJ
+#k na poczatku i koncu #. k
+Something
+#k
+Sam format
+20 znakow max : #.20k
+testowy8
+ala #.3k kota, a kot #.3 k ale
+makot
+MALE #.2k LITERY
+WYRAZ
