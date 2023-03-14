@@ -8,13 +8,13 @@ TEST 4: [#k]
 TaK
 TEST 5: [#10k]
 TUTAJ
-#k na poczatku i koncu #. k
+TEST 6: [#..k]
 Something
-#k
+TEST 7: [#s]
 Sam format
-20 znakow max : #.20k
+TEST 8: [##kk]
 testowy8
-ala #.3k kota, a kot #.3 k ale
+TEST 9: [#9.3k]
 makot
-MALE #.2k LITERY
+TEST 10: [#2k]
 WYRAZ
