@@ -1,10 +1,10 @@
-wielka litera na poczatku sOM
-wielka litera na koncu SOMETHINg
-wielkie litery losowo sL
-# k nieprawidlowy format
-prawidlowy tutaj format w srodku
-sOMETHING na poczatku i koncu #. k
-sAM FORMAT
-20 znakow max : TESTOWY8
-ala MAK kota, a kot #.3 k ale
-MALE wy LITERY
+TEST 1
+TEST 2
+TEST 3
+TEST 4
+TEST 5
+TEST 6
+TEST 7
+TEST 8
+TEST 9
+TEST 10

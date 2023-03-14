@@ -1,12 +1,12 @@
-wielka litera na poczatku #.3k
+TEST 1: [#5.5k]
 Something
-wielka litera na koncu #k
+TEST 2: [#.5k]
 somethinG
-wielkie litery losowo #.2k
+TEST 3: [#5k]
 SloWo
-# k nieprawidlowy format
+TEST 4: [#k]
 TaK
-prawidlowy #k format w srodku
+TEST 5: [#10k]
 TUTAJ
 #k na poczatku i koncu #. k
 Something
