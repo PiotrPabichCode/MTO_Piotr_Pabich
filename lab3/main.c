@@ -19,13 +19,13 @@ int validate_format(const char * string, int * width, int * precision) {
 
 	res = sscanf(string, "%d%c", width, &endpoint); // #10k
 	if(res == 2) {
-		if(endpoint == 'k') {
+		if(endpoint == 'k' && *width > 0) {
 			return 3;
 		}
 	}	
 	res = sscanf(string, "%d%c%d%c", width, &dot, precision, &endpoint); // #10.10k
 	if(res == 4) {
-		if(*width > 0 && dot == '.' && *precision > 0 && endpoint == 'k') {
+		if(*width > 0 && dot == '.' && *precision >= 0 && endpoint == 'k') {
 			return 4;
 		}
 	}

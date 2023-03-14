@@ -2,9 +2,9 @@ TEST 1: [#5.5k]
 Something
 TEST 2: [#.5k]
 somethinG
-TEST 3: [#5k]
+TEST 3: [#3k]
 SloWo
-TEST 4: [#k]
+TEST 4: [#0k]
 TaK
 TEST 5: [#10k]
 TUTAJ
@@ -14,7 +14,7 @@ TEST 7: [#s]
 Sam format
 TEST 8: [##kk]
 testowy8
-TEST 9: [#9.3k]
+TEST 9: [#9.0k]
 makot
 TEST 10: [#2k]
 WYRAZ
