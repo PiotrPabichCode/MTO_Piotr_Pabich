@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int validate_format(const char * string, int * width, int * precision) {
 	char dot, endpoint;
@@ -32,6 +33,12 @@ int validate_format(const char * string, int * width, int * precision) {
 	return -1;
 }
 void print_swapcase(const char * string, int width, int precision) {
+	if(width != -1) {
+		int spaces = width - (precision > strlen(string) ? strlen(string) : precision);
+		for(int i = 0; i < spaces; i++) {
+			putchar(' ');
+		}
+	}
 	for(int i = 0; i < strlen(string) && i < precision; i++) {
 		if(islower(string[i])) {
 			putchar(toupper(string[i]));	
@@ -45,11 +52,34 @@ void print_swapcase(const char * string, int width, int precision) {
 
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
-		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
-			i++;
-			printf("%s",param);
-		}else
+		int valid = 0;
+		if((format_string[i] == '#')){
+			const char * tmp = format_string + i + 1;
+			int width, precision;
+			int res = validate_format(tmp, &width, &precision);
+            if(res != -1) {
+                if(res == 1) {
+				    print_swapcase(param, -1, strlen(param)); // #k
+                } else if(res == 2) {
+                    print_swapcase(param, -1, precision); // #.10k 
+                } else if(res == 3) {
+                    print_swapcase(param, width, strlen(param)); // #10k
+                } else if(res == 4) {
+                    print_swapcase(param, width, precision); // #10.10k
+                }
+                for(;;i++) {
+                    char c = format_string[i];
+                    if(c == 'k') {
+                        break;
+                    }
+                }
+				valid = 1;
+            }
+		}
+		// display single char
+		if(!valid) {
 			putchar(format_string[i]);
+		}
 	}
 	puts("");
 	return 0;
