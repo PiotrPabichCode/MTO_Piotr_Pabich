@@ -29,9 +29,15 @@ void print_reverse_number(long number) {
 
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
-		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
-			i++;
-			printf("%s",param);
+		if((format_string[i] == '#') && (format_string[i+1] == 'g')){
+			int error;
+			long num = validate_number(param, &error);
+			if(error == 0) {
+				i++;
+				print_reverse_number(num);
+			} else {
+				putchar(format_string[i]);
+			}
 		}else
 			putchar(format_string[i]);
 	}
