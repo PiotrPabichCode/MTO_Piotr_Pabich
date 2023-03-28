@@ -15,8 +15,15 @@ void print_reverse_number(long number) {
 	char buff[50] = {0};
 	sprintf(buff, "%ld", number);
 	int pos = strlen(buff) - 1;
-	while(pos >= 0) {
-		putchar(buff[pos--]);
+	if(buff[0] == '-') {
+		putchar(buff[0]);
+		while(pos > 0) {
+			putchar(buff[pos--]);
+		}
+	} else {
+		while(pos >= 0) {
+			putchar(buff[pos--]);
+		}
 	}
 }
 
