@@ -11,6 +11,15 @@ int validate_number(const char * text, int * error) {
 	return num;
 }
 
+void print_reverse_number(long number) {
+	char buff[50] = {0};
+	sprintf(buff, "%ld", number);
+	int pos = strlen(buff) - 1;
+	while(pos >= 0) {
+		putchar(buff[pos--]);
+	}
+}
+
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
