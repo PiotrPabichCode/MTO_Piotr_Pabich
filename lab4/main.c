@@ -12,19 +12,33 @@ int validate_number(const char * text, int * error) {
 }
 
 void print_reverse_number(long number) {
-	char buff[50] = {0};
+	char buff[100] = {0};
 	sprintf(buff, "%ld", number);
 	int pos = strlen(buff) - 1;
 	if(buff[0] == '-') {
 		putchar(buff[0]);
+		while(1) {
+			if(buff[pos] == '0') {
+				pos--;
+			} else {
+				break;
+			}
+		}
 		while(pos > 0) {
 			putchar(buff[pos--]);
 		}
 	} else {
+		while(1) {
+			if(buff[pos] == '0') {
+				pos--;
+			} else {
+				break;
+			}
+		}
 		while(pos >= 0) {
 			putchar(buff[pos--]);
 		}
-	}
+	} 
 }
 
 int my_printf(char *format_string, char *param){
