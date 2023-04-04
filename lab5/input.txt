@@ -8,3 +8,7 @@ To jest test bez formatu
 876
 #10g
 8
+#.g - zly format
+2000
+#10g - zły argument
+alamakota
