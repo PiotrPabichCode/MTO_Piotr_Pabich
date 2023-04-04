@@ -64,6 +64,12 @@ int my_printf(char *format_string, char *param){
             const char * tmp = format_string + i + 1;
             int precision;
             int res = validate_format(tmp, &precision);
+            if(res == 3) {
+                putchar('#');
+                putchar('#');
+                i++;
+                continue;
+            }
             int error = 1;
             if(res != -1) {
                 long number = validate_number(param, &error);
