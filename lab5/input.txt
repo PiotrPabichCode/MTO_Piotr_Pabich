@@ -2,3 +2,9 @@
 123
 To jest test bez formatu
 999
+#2g
+-23
+#5g
+876
+#10g
+8
