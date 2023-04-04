@@ -3,3 +3,10 @@ To jest test bez formatu
 -12
   765
          7
+#.g - zly format
+#10g - zły argument
+      5477. 5477.5477
+123456789
+6666
+-0009
+#g - pusty argument

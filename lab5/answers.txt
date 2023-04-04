@@ -8,3 +8,5 @@ To jest test bez formatu
       5477. 5477.5477
 123456789
 6666
+-0009
+#g - pusty argument

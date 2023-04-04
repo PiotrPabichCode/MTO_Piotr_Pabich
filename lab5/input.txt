@@ -18,3 +18,7 @@ alamakota
 234567890
 #0g
 7777
+#g
+-1110
+#g - pusty argument
+
