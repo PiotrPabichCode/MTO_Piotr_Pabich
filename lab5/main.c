@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int validate_format(const char * string, int * precision) {
     char endpoint;
@@ -14,7 +15,10 @@ int validate_format(const char * string, int * precision) {
     }
     res = sscanf(string, "%d%c", precision, &endpoint); // #10g
     if(res == 2) {
-        if(endpoint == 'g' && *precision >= 0) {
+		if(*precision < 0 && endpoint == 'g') {
+			return 4;
+		}
+        if(endpoint == 'g') {
             return 2;
         }
     }
@@ -32,11 +36,11 @@ long validate_number(const char * text, int * error) {
     return num;
 }
 
-void print_changed_number(long number, int precision) {
+void print_changed_number(long number, int precision, int mode) {
     //printf("%s\n", number);
     char buff[100] = {0};
     sprintf(buff, "%ld", number);
-    if(precision != -1) {
+    if(precision != -1 && mode != 1) {
         int spaces = precision - strlen(buff);
         for(int i = 0; i < spaces; i++) {
             //printf("i: %d | %d\n", i, precision - strlen(number));
@@ -55,6 +59,12 @@ void print_changed_number(long number, int precision) {
         }
         putchar(num);
     }
+	if(mode == 1) {
+		int spaces = precision - strlen(buff);
+		for(int i = 0; i < spaces; i++) {
+			putchar(' ');
+		}
+	}
 }
 
 int my_printf(char *format_string, char *param){
@@ -75,10 +85,12 @@ int my_printf(char *format_string, char *param){
                 long number = validate_number(param, &error);
                 if(error == 0) {
                     if(res == 1) {
-                        print_changed_number(number, -1);
-                    } else {
-                        print_changed_number(number, precision);
-                    }
+                        print_changed_number(number, -1, 0);
+                    } else if(res == 2){
+                        print_changed_number(number, precision, 0);
+                    } else if(res == 4) {
+						print_changed_number(number, abs(precision), 1);
+					}
                     valid = 1;
                     for(;;i++) {
                         char c = format_string[i];

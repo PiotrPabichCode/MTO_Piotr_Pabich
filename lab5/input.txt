@@ -22,3 +22,5 @@ alamakota
 -1110
 #g - pusty argument
 
+[#-10g]
+676

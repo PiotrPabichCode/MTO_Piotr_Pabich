@@ -10,3 +10,4 @@ To jest test bez formatu
 6666
 -0009
 #g - pusty argument
+[565       ]
