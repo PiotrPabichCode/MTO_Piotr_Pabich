@@ -12,3 +12,9 @@ To jest test bez formatu
 2000
 #10g - zły argument
 alamakota
+#10g.#5g.#2g
+6588
+#5g
+234567890
+#0g
+7777
