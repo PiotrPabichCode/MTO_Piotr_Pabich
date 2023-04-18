@@ -60,6 +60,13 @@ long validate_number(const char * text, int * error) {
     return num;
 }
 
+void single_change(char c) {
+	int num = (int)(c - '0');
+	int num1 = (num*9+1)%10;
+	char out = num1 + '0';
+	putchar(out);
+}
+
 int main(int argc, char *argv[]){
 	char buf[1024],buf2[1024];
 	while(gets(buf)){
