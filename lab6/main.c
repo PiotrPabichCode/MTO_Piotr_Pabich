@@ -13,6 +13,16 @@ int my_printf(char *format_string, char *param){
 	return 0;
 }
 
+long validate_number(const char * text, int * error) {
+    long num;
+    if(sscanf(text, "%ld", &num) != 1) {
+        *error = 1;
+        return 0;
+    }
+    *error = 0;
+    return num;
+}
+
 int main(int argc, char *argv[]){
 	char buf[1024],buf2[1024];
 	while(gets(buf)){
@@ -21,3 +31,4 @@ int main(int argc, char *argv[]){
 	}
 	return 0;
 }
+
