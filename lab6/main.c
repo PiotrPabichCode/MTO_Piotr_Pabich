@@ -1,5 +1,42 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+
+int validate_format(const char * string, int * width, int * precision) {
+    char endpoint, dot;
+    int res = sscanf(string, "%c", &endpoint); // #g
+    if(res == 1) {
+        if(endpoint == '#') {
+            return 0;
+        }
+        if(endpoint == 'g') {
+            return 1;
+        }
+    }
+
+	res = sscanf(string, "%c%d%c", &dot, precision, &endpoint); // #.10g
+	if(res == 3) {
+		if(dot == '.' && *precision > 0 && endpoint == 'g') {
+			return 2;
+		}
+	}
+
+    res = sscanf(string, "%d%c", precision, &endpoint); // #10g
+    if(res == 2) {
+        if(endpoint == 'g') {
+            return 3;
+        }
+    }
+
+	res = sscanf(string, "%d%c%d%c", width, &dot, precision, &endpoint); // #10.10g
+	if(res == 4) {
+		if(dot == '.' && *precision >= 0 && endpoint == 'g') {
+			return 4;
+		}
+	}
+
+    return -1;
+}
 
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
