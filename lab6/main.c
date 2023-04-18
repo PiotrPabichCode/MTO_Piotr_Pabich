@@ -21,9 +21,10 @@ int validate_format(const char * string, int * width, int * precision) {
 		}
 	}
 
-    res = sscanf(string, "%d%c", precision, &endpoint); // #10g
+    res = sscanf(string, "%d%c", width, &endpoint); // #10g
     if(res == 2) {
         if(endpoint == 'g') {
+			*precision = 0;
             return 3;
         }
     }
@@ -58,28 +59,23 @@ void single_change(char c) {
 void print_changed_number(long number, int width, int precision) {
 	char buff[100] = {0};
 	sprintf(buff, "%ld", number);
-	int start = 0;
-	if(buff[start] == '-') {
-        putchar('-');
-		start++;
-    }
 	int number_len = strlen(buff);
-	if(buff[0] == '-') number_len--;
-//	printf("%d | %d | %d\n", strlen(buff), width, precision);
-	int zeros = precision - number_len;
-	if(zeros < 0) {
-		zeros = 0;
-	}
-	int spaces = abs(width) - number_len - zeros;
 
-	// spacje na początku
-	if(width > 0 && spaces > 0) {
+	int max_precision = number_len;
+	if(max_precision < precision) {
+		max_precision = precision;
+	}
+
+	// printowanie spacji na poczatku
+	if(abs(width) > max_precision && width > 0) {
+		int spaces = abs(width) - max_precision;
 		for(int i = 0; i < spaces; i++) {
 			putchar(' ');
 		}
-	} 
+	}
 
-	// wyświetlanie zer
+	//printf("Precision: %d | width: %d\n", precision, width);
+	// printowanie zer
 	int zeros_counter = precision - number_len;
 	if(zeros_counter > 0) {
 		for(int i = 0; i < zeros_counter; i++) {
@@ -89,14 +85,20 @@ void print_changed_number(long number, int width, int precision) {
 
 
 	// wyświetlanie liczby
-	for(;start < strlen(buff); start++) {
+	for(int start = 0; start < strlen(buff); start++) {			
+		if(buff[start] == '-') {
+        	putchar('-');
+			continue;
+    	}
         single_change(buff[start]);
     }
 
 
+	// printowanie spacji na koncu
 
-	// spacje na końcu
-	if(width < 0 && spaces > 0) {
+	// printowanie spacji na poczatku
+	if(abs(width) > max_precision && width < 0) {
+		int spaces = abs(width) - max_precision;
 		for(int i = 0; i < spaces; i++) {
 			putchar(' ');
 		}

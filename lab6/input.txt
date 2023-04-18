@@ -4,3 +4,17 @@
 4378
 3.Test [#6.5g]
 4378
+4.Test [#-6g]
+9
+5.Test [#-5g]
+4378
+6.Test [#-5g]
+2
+7.Test [#5g]
+-3
+8.Test [#g]
+4
+9.Test [#g]
+something
+10.Test [#g]
+somet123ing
