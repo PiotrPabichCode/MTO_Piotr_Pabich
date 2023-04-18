@@ -104,15 +104,40 @@ void print_changed_number(long number, int width, int precision) {
 }
 
 int my_printf(char *format_string, char *param){
-	for(int i=0;i<strlen(format_string);i++){
-		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
-			i++;
-			printf("%s",param);
-		}else
-			putchar(format_string[i]);
-	}
-	puts("");
-	return 0;
+    for(int i=0;i<strlen(format_string);i++){
+        int valid = 0;
+        if(format_string[i] == '#'){
+            const char * tmp = format_string + i + 1;
+            int precision=0, width=0;
+            int res = validate_format(tmp, &width, &precision);
+            if(res == 0) {
+                putchar('#');
+                putchar('#');
+                i++;
+                continue;
+            }
+            int error = 1;
+            if(res != -1) {
+                long number = validate_number(param, &error);
+                if(error == 0) {
+                    print_changed_number(number, width, precision);
+                    valid = 1;
+                    for(;;i++) {
+                        char c = format_string[i];
+                        if(c == 'g') {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        // display single char
+        if(!valid) {
+            putchar(format_string[i]);
+        }
+    }
+    puts("");
+    return 0;
 }
 
 int main(int argc, char *argv[]){
