@@ -38,18 +38,6 @@ int validate_format(const char * string, int * width, int * precision) {
     return -1;
 }
 
-int my_printf(char *format_string, char *param){
-	for(int i=0;i<strlen(format_string);i++){
-		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
-			i++;
-			printf("%s",param);
-		}else
-			putchar(format_string[i]);
-	}
-	puts("");
-	return 0;
-}
-
 long validate_number(const char * text, int * error) {
     long num;
     if(sscanf(text, "%ld", &num) != 1) {
@@ -65,6 +53,18 @@ void single_change(char c) {
 	int num1 = (num*9+1)%10;
 	char out = num1 + '0';
 	putchar(out);
+}
+
+int my_printf(char *format_string, char *param){
+	for(int i=0;i<strlen(format_string);i++){
+		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
+			i++;
+			printf("%s",param);
+		}else
+			putchar(format_string[i]);
+	}
+	puts("");
+	return 0;
 }
 
 int main(int argc, char *argv[]){
