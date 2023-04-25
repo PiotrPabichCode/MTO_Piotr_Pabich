@@ -19,6 +19,8 @@ def print_changed(number):
             out.append('k')
         elif i == 'f':
             out.append('l')
+        else:
+            out.append(i)
     outPrint = ''.join(str(j) for j in out)
     print(outPrint,end="")
 
