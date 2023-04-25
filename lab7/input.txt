@@ -1,7 +1,7 @@
 #j
 20
 #j
-A2B4
+12
 #j
 ABCD
 #j
@@ -11,7 +11,7 @@ ABCD
 something #j
 666
 12345444 #j
-liczba
+DEADBEEF
 cos tam #j
 123456789ABCDEF
 raz dwa trzy #j
