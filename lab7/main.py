@@ -2,6 +2,24 @@
 
 import sys
 
+def print_changed(number):
+    changed = str(hex(int(number)))
+    changed = changed.replace('0x','')
+    out = []
+    for i in changed:
+        if i == 'a':
+            out.append('g')
+        elif i == 'b':
+            out.append('h')
+        elif i == 'c':
+            out.append('i')
+        elif i == 'd':
+            out.append('j')
+        elif i == 'e':
+            out.append('k')
+        elif i == 'f':
+            out.append('l')
+
 def my_printf(format_string,param):
     #print(format_string)
     shouldDo=True
