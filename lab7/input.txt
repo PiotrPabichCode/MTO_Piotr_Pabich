@@ -8,3 +8,15 @@ ABCD
 1234
 #j
 1000
+something #j
+666
+12345444 #j
+liczba
+cos tam #j
+123456789ABCDEF
+raz dwa trzy #j
+555
+test #j test
+AAA
+zly format #.j
+1000
