@@ -3,8 +3,9 @@
 import sys
 
 def print_changed(number):
-    changed = str(hex(int(number)))
-    changed = changed.replace('0x','')
+    hexValue = int(number,16)
+    strValue = str(hex(hexValue))
+    changed = strValue.replace('0x','')
     out = []
     for i in changed:
         if i == 'a':
