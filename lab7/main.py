@@ -19,6 +19,8 @@ def print_changed(number):
             out.append('k')
         elif i == 'f':
             out.append('l')
+    outPrint = ''.join(str(j) for j in out)
+    print(outPrint,end="")
 
 def my_printf(format_string,param):
     #print(format_string)
