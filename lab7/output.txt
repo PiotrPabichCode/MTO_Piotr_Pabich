@@ -1,11 +1,11 @@
-20
-12
-ghij
-1234
-1000
-something 666
-12345444 jkgjhkkl
-cos tam 123456789ghijkl
-raz dwa trzy 555
-test ggg test
+14
+i
+4j2
+4j2
+3k8
+something 29g
+12345444 g
+cos tam 16
+raz dwa trzy 22h
+test 3k7 test
 zly format #.j

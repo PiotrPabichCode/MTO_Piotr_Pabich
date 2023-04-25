@@ -3,7 +3,7 @@
 #j
 12
 #j
-ABCD
+1234
 #j
 1234
 #j
@@ -11,12 +11,12 @@ ABCD
 something #j
 666
 12345444 #j
-DEADBEEF
+10
 cos tam #j
-123456789ABCDEF
+22
 raz dwa trzy #j
 555
 test #j test
-AAA
+999
 zly format #.j
 1000

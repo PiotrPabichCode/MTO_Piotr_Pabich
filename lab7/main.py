@@ -3,7 +3,7 @@
 import sys
 
 def print_changed(number):
-    hexValue = int(number,16)
+    hexValue = int(number)
     strValue = str(hex(hexValue))
     changed = strValue.replace('0x','')
     out = []
