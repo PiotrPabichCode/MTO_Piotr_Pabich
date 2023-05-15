@@ -1,10 +1,10 @@
-totafsdfsf test fdsfsdf
-totafsdtest2 fdsfsdf fdfjs
-jfldjfldk # wynik
-fjdfsfds # k alal
-djfjkldsjf test5 jjjjjj fsfjdljfdlsj flj ldfj
-gjjkdsljflds test6 jdlkfjdslf
-fjdslkfjdl test7 tttttt
-fjdlsjfkl test8 oooolll
-rwrewrew test9 fjdslkjfdl
-fjdlskjfldjflj test10 rewrewrew
+TEST1: [TEST]
+TEST2: [# kTesT2]
+TEST3: [#s]
+TEST4: [TeSt4TeSt4]
+TEST5: [tttEST5k]
+TEST6: [#10k]
+TEST7: [something TEst7st]
+TEST8: [someTest8thing]
+TEST9: [92839]
+TEST10: [test10]
