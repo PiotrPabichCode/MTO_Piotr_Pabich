@@ -1,20 +1,20 @@
-totafsdfsf #k fdsfsdf
-test
-totafsd#k fdsfsdf fdfjs
-tes
-jfldjfldk # wynik
-te
-fjdfsfds # k alal
-t
-djfjkldsjf #k jjjjjj fsfjdljfdlsj flj ldfj
-o
-gjjkdsljflds #k jdlkfjdslf
-s
-fjdslkfjdl #k tttttt
-7
-fjdlsjfkl #k oooolll
-8
-rwrewrew #k fjdslkjfdl
-9
-fjdlskjfldjflj #k rewrewrew
+SHORT_ANSWERS_TEST1: something #k fdsfsdf
+a
+SHORT_ANSWERS_TEST2: something#k fdsfsdf fdfjs
+B
+SHORT_ANSWERS_TEST3: something # wynik
+c
+SHORT_ANSWERS_TEST4: something # k alal
+D
+SHORT_ANSWERS_TEST5: something #k jjjjjj something flj ldfj
+e
+SHORT_ANSWERS_TEST6: something #k jdlkfjdslf
+f
+SHORT_ANSWERS_TEST7: something #k tttttt
+G
+SHORT_ANSWERS_TEST8: fjdlsjfkl #k something
+H
+SHORT_ANSWERS_TEST9: rwrewrew #k something
+I
+SHORT_ANSWERS_TEST10: something #k something
 0
