@@ -1,0 +1,20 @@
+BAD_ANSWERS_TEST1: # 10k something
+tESt1
+BAD_ANSWERS_TEST2: something#l something something
+TEst2
+BAD_ANSWERS_TEST3: something # something
+TESt3
+BAD_ANSWERS_TEST4: something # trhfge
+TEST4
+BAD_ANSWERS_TEST5: kkkkkk #l jjjjjj qweqwe ee eee
+TESTTEST5
+BAD_ANSWERS_TEST6: ala #l ala
+tesT6
+BAD_ANSWERS_TEST7: #l
+TeSt7
+BAD_ANSWERS_TEST8: # k
+tEsT8
+BAD_ANSWERS_TEST9: ###lk#
+test9
+BAD_ANSWERS_TEST10: something #(k something
+test10

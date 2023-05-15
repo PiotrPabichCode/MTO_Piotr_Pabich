@@ -1,10 +1,40 @@
-wielka litera na poczatku sOM
-wielka litera na koncu SOMETHINg
-wielkie litery losowo sL
-# k nieprawidlowy format
-prawidlowy tutaj format w srodku
-sOMETHING na poczatku i koncu #. k
-sAM FORMAT
-20 znakow max : TESTOWY8
-ala MAK kota, a kot #.3 k ale
-MALE wy LITERY
+NOPARAM_ANSWERS_TEST1: something #  fdsfsdf
+NOPARAM_ANSWERS_TEST2: something#  fdsfsdf fdfjs
+NOPARAM_ANSWERS_TEST3: something # wynik
+NOPARAM_ANSWERS_TEST4: something #  alal
+NOPARAM_ANSWERS_TEST5: something #  jjjjjj something flj ldfj
+NOPARAM_ANSWERS_TEST6: something # jdlkfjdslf
+NOPARAM_ANSWERS_TEST7: something # tttttt
+NOPARAM_ANSWERS_TEST8: fjdlsjfkl #  something
+NOPARAM_ANSWERS_TEST9: rwrewrew # something
+NOPARAM_ANSWERS_TEST10: something #  something
+SHORT_ANSWERS_TEST1: something #.0k fdsfsdf
+SHORT_ANSWERS_TEST2: somethingb fdsfsdf fdfjs
+SHORT_ANSWERS_TEST3: something # wynik
+SHORT_ANSWERS_TEST4: something # k alal
+SHORT_ANSWERS_TEST5: something #.k jjjjjj something flj ldfj
+SHORT_ANSWERS_TEST6: something F jdlkfjdslf
+SHORT_ANSWERS_TEST7: something g tttttt
+SHORT_ANSWERS_TEST8: fjdlsjfkl h something
+SHORT_ANSWERS_TEST9: rwrewrew i something
+SHORT_ANSWERS_TEST10: something 0 something
+LONG_ANSWERS_TEST1: something TESTT fdsfsdf
+LONG_ANSWERS_TEST2: somethingTESTTESTTE fdsfsdf fdfjs
+LONG_ANSWERS_TEST3: something # wynik
+LONG_ANSWERS_TEST4: something # k alal
+LONG_ANSWERS_TEST5: something TESTTESTTESTTESTTEST jjjjjj something flj ldfj
+LONG_ANSWERS_TEST6: something TESTTESTTESTTESTTESTTESTttttttttttttttttTESTTESTTE jdlkfjdslf
+LONG_ANSWERS_TEST7: something TESTTESTTE tttttt
+LONG_ANSWERS_TEST8: fjdlsjfkl TESTTESTTESTTESTTESTTESTttttttttttttttttTESTTESTTESTTESTTESTTESTttttttttttttttttTESTTESTTESTTESTTEST something
+LONG_ANSWERS_TEST9: rwrewrew TESTTESTTESTTESTTESTTESTttttttttttttttttTESTTESTTESTTESTTESTTESTtttt something
+LONG_ANSWERS_TEST10: something TESTTESTTESTTESTTEST something
+BAD_ANSWERS_TEST1: # 10k something
+BAD_ANSWERS_TEST2: something#l something something
+BAD_ANSWERS_TEST3: something # something
+BAD_ANSWERS_TEST4: something # trhfge
+BAD_ANSWERS_TEST5: kkkkkk #l jjjjjj qweqwe ee eee
+BAD_ANSWERS_TEST6: ala #l ala
+BAD_ANSWERS_TEST7: #l
+BAD_ANSWERS_TEST8: # k
+BAD_ANSWERS_TEST9: ###lk#
+BAD_ANSWERS_TEST10: something #(k something
