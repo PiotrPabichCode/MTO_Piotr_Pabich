@@ -1,10 +1,10 @@
-totafsdfsf #l fdsfsdf
-totafsd#l fdsfsdf fdfjs
-jfldjfldk # wynik
-fjdfsfds # k alal
-djfjkldsjf #l jjjjjj fsfjdljfdlsj flj ldfj
-gjjkdsljflds #l jdlkfjdslf
-fjdslkfjdl #l tttttt
-fjdlsjfkl #l oooolll
-rwrewrew #l fjdslkjfdl
-fjdlskjfldjflj #l rewrewrew
+BAD_ANSWERS_TEST1: #l something
+BAD_ANSWERS_TEST2: something#l something something
+BAD_ANSWERS_TEST3: something # something
+BAD_ANSWERS_TEST4: something # trhfge
+BAD_ANSWERS_TEST5: kkkkkk #l jjjjjj qweqwe ee eee
+BAD_ANSWERS_TEST6: ala #l ala
+BAD_ANSWERS_TEST7: #l
+BAD_ANSWERS_TEST8: # k
+BAD_ANSWERS_TEST9: ###lk#
+BAD_ANSWERS_TEST10: something #(k something
