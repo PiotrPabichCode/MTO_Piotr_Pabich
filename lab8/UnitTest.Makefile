@@ -67,6 +67,8 @@ endef
 	$(call perform_test,bad_format,"Bad format")
 	$(call perform_test,correct_format,"Correct format")
 	$(call perform_test,longer_format,"Longer format than given value")
+	$(call perform_test,shorter_format,"Shorter format than given value")
+	$(call perform_test,converted_letters,"Check converted values a-f and 0")
 
 	$(call restore_data)
 
@@ -78,6 +80,8 @@ generate:
 	$(call generate_answers,bad_format)
 	$(call generate_answers,correct_format)
 	$(call generate_answers,longer_format)
+	$(call generate_answers,shorter_format)
+	$(call generate_answers,converted_letters)
 
 	$(call restore_data)
 
@@ -88,3 +92,5 @@ merge:
 	$(call merge_test,bad_format)
 	$(call merge_test,correct_format)
 	$(call merge_test,longer_format)
+	$(call merge_test,shorter_format)
+	$(call merge_test,converted_letters)
