@@ -1,0 +1,10 @@
+LONGER_FORMAT_TEST1: #.3j - number length:2 
+24
+LONGER_FORMAT_TEST2: #.6j - number length:4 
+898
+LONGER_FORMAT_TEST3: #.10j - number length:5 
+8989
+LONGER_FORMAT_TEST4: #.50j - number length:4 
+777
+LONGER_FORMAT_TEST5: #.100j - number length:2
+44
