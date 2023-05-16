@@ -1,1 +1,18 @@
-dummy
+BAD_FORMAT_TEST1: #..j
+BAD_FORMAT_TEST2: #:j
+BAD_FORMAT_TEST3: #,j
+BAD_FORMAT_TEST4: #x
+BAD_FORMAT_TEST5: #.x
+BAD_FORMAT_TEST6: #.s
+BAD_FORMAT_TEST7: #i
+CORRECT_FORMAT_TEST1: alamakota oooih opopk
+CORRECT_FORMAT_TEST2: something o58 opopk
+CORRECT_FORMAT_TEST3: alamakota 4j something
+CORRECT_FORMAT_TEST4: qwgfdg 42 opopk
+CORRECT_FORMAT_TEST5: alamakota 37 asdaghh
+CORRECT_FORMAT_TEST6: sdgc ooooo27o3 qkijqweoh
+LONGER_FORMAT_TEST1: o18 - number length:2
+LONGER_FORMAT_TEST2: ooo382 - number length:4
+LONGER_FORMAT_TEST3: oooooo231j - number length:5
+LONGER_FORMAT_TEST4: ooooooooooooooooooooooooooooooooooooooooooooooo3o9 - number length:4
+LONGER_FORMAT_TEST5: oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo2i - number length:2

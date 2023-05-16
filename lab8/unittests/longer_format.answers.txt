@@ -1,0 +1,5 @@
+LONGER_FORMAT_TEST1: o18 - number length:2
+LONGER_FORMAT_TEST2: ooo382 - number length:4
+LONGER_FORMAT_TEST3: oooooo231j - number length:5
+LONGER_FORMAT_TEST4: ooooooooooooooooooooooooooooooooooooooooooooooo3o9 - number length:4
+LONGER_FORMAT_TEST5: oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo2i - number length:2

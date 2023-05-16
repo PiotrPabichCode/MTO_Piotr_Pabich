@@ -66,6 +66,7 @@ endef
 	
 	$(call perform_test,bad_format,"Bad format")
 	$(call perform_test,correct_format,"Correct format")
+	$(call perform_test,longer_format,"Longer format than given value")
 
 	$(call restore_data)
 
@@ -76,6 +77,7 @@ generate:
 	
 	$(call generate_answers,bad_format)
 	$(call generate_answers,correct_format)
+	$(call generate_answers,longer_format)
 
 	$(call restore_data)
 
@@ -85,3 +87,4 @@ merge:
 
 	$(call merge_test,bad_format)
 	$(call merge_test,correct_format)
+	$(call merge_test,longer_format)

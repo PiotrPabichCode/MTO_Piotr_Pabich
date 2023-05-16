@@ -1,3 +1,17 @@
+BAD_FORMAT_TEST1: #..j
+2837
+BAD_FORMAT_TEST2: #:j
+897
+BAD_FORMAT_TEST3: #,j
+29
+BAD_FORMAT_TEST4: #x
+1235
+BAD_FORMAT_TEST5: #.x
+555
+BAD_FORMAT_TEST6: #.s
+332
+BAD_FORMAT_TEST7: #i
+1321
 CORRECT_FORMAT_TEST1: alamakota #.5j opopk
 203
 CORRECT_FORMAT_TEST2: something #.3j opopk
@@ -10,3 +24,13 @@ CORRECT_FORMAT_TEST5: alamakota #.0j asdaghh
 55
 CORRECT_FORMAT_TEST6: sdgc #.9j qkijqweoh
 9987
+LONGER_FORMAT_TEST1: #.3j - number length:2 
+24
+LONGER_FORMAT_TEST2: #.6j - number length:4 
+898
+LONGER_FORMAT_TEST3: #.10j - number length:5 
+8989
+LONGER_FORMAT_TEST4: #.50j - number length:4 
+777
+LONGER_FORMAT_TEST5: #.100j - number length:2
+44
