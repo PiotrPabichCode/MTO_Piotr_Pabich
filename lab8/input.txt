@@ -1,0 +1,12 @@
+CORRECT_FORMAT_TEST1: alamakota #.5j opopk
+203
+CORRECT_FORMAT_TEST2: something #.3j opopk
+88
+CORRECT_FORMAT_TEST3: alamakota #.2j something
+77
+CORRECT_FORMAT_TEST4: qwgfdg #.1j opopk
+66
+CORRECT_FORMAT_TEST5: alamakota #.0j asdaghh
+55
+CORRECT_FORMAT_TEST6: sdgc #.9j qkijqweoh
+9987

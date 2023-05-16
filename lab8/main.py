@@ -38,7 +38,7 @@ def my_printf(format_string,param):
         return
     given_format = match.group(0)
     given_len = match.group(1)
-    changed_number = change_number(given_format, given_len)
+    changed_number = change_number(param, given_len)
 
     print(format_string.replace(given_format, changed_number))
 

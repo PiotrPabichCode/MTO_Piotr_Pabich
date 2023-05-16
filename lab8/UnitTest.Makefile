@@ -65,6 +65,7 @@ endef
 	# perform_test,INPUT_FILE_NAME_WOUT_EXTENSION,TEST_NAME
 	
 	$(call perform_test,bad_format,"Bad format")
+	$(call perform_test,correct_format,"Correct format")
 
 	$(call restore_data)
 
@@ -74,6 +75,7 @@ generate:
 	# generate_output,INPUT_FILE_NAME_WOUT_EXTENSION
 	
 	$(call generate_answers,bad_format)
+	$(call generate_answers,correct_format)
 
 	$(call restore_data)
 
@@ -82,3 +84,4 @@ merge:
 	-rm ./answers.txt 2>/dev/null
 
 	$(call merge_test,bad_format)
+	$(call merge_test,correct_format)
