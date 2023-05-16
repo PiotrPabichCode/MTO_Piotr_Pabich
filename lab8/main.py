@@ -32,18 +32,15 @@ def change_number(number, num_len):
 
 
 def my_printf(format_string,param):
-    #print(format_string)
-    shouldDo=True
-    for idx in range(0,len(format_string)):
-        if shouldDo:
-            if format_string[idx] == '#' and format_string[idx+1] == 'k':
-                print(param,end="")
-                shouldDo=False
-            else:
-                print(format_string[idx],end="")
-        else:
-            shouldDo=True
-    print("")
+    match = re.search("#\.(\d+)j", format_string)
+    if not match:
+        print(format_string)
+        return
+    given_format = match.group(0)
+    given_len = match.group(1)
+    changed_number = change_number(given_format, given_len)
+
+    print(format_string.replace(given_format, changed_number))
 
 data=sys.stdin.readlines()
 
