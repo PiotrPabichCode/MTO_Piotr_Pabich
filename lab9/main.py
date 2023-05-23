@@ -2,6 +2,32 @@
 
 import sys
 
+def change_number(number):
+    out = []
+    for i in number:
+        if i == '0':
+            out.append('a')
+        elif i == '1':
+            out.append('b')
+        elif i == '2':
+            out.append('c')
+        elif i == '3':
+            out.append('d')
+        elif i == '4':
+            out.append('e')
+        elif i == '5':
+            out.append('f')
+        elif i == '6':
+            out.append('g')
+        elif i == '7':
+            out.append('h')
+        elif i == '8':
+            out.append('i')
+        elif i == '9':
+            out.append('j')
+        outNumber = ''.join(str(j) for j in out)
+        return outNumber
+
 def my_printf(format_string,param):
     #print(format_string)
     shouldDo=True
