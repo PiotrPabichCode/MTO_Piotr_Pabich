@@ -33,6 +33,13 @@ def change_digit(digit):
     digit = (digit + 5) % 10
     return str(digit)
 
+def change_second_part(number):
+    out = []
+    for i in number:
+        out.append(change_digit(i))
+    outNumber = ''.join(str(j) for j in out)
+    return outNumber
+
 def my_printf(format_string,param):
     #print(format_string)
     shouldDo=True
