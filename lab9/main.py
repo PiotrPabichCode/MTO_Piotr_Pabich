@@ -51,7 +51,7 @@ def my_printf(format_string,param):
     given_len = match.group(1)
 
     param = float(param)
-    formatted_number = f"{param:.{given_len}}"
+    formatted_number = f"{param:.{given_len}f}"
 
     first = ''
     second = ''
