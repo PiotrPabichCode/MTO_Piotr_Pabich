@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+import re
 
 def change_number(number):
     out = []
@@ -41,18 +42,29 @@ def change_second_part(number):
     return outNumber
 
 def my_printf(format_string,param):
-    #print(format_string)
-    shouldDo=True
-    for idx in range(0,len(format_string)):
-        if shouldDo:
-            if format_string[idx] == '#' and format_string[idx+1] == 'k':
-                print(param,end="")
-                shouldDo=False
-            else:
-                print(format_string[idx],end="")
-        else:
-            shouldDo=True
-    print("")
+    match = re.search("#\.(\d+)h", format_string)
+    if not match:
+        print(format_string)
+        return
+    
+    given_format = match.group(0)
+    given_len = match.group(1)
+
+    param = float(param)
+    formatted_number = f"{param:.{given_len}}"
+
+    first = ''
+    second = ''
+
+    if '.' in formatted_number:
+        first, second = formatted_number.split('.')
+    else:
+        first = formatted_number
+        second = ''
+
+    formatted_number = first + ('.' if second else '') + second
+
+    print(format_string.replace(given_format, formatted_number))
 
 data=sys.stdin.readlines()
 
