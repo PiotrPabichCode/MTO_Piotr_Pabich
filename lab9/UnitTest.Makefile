@@ -66,7 +66,8 @@ endef
 	
 	$(call perform_test,wrong_format,"Wrong format")
 	$(call perform_test,correct_format,"Random correct format")
-	$(call perform_test,int_param,"Int parameter")
+	$(call perform_test,short_number,"Short parameter")
+	$(call perform_test,long_number,"Long parameter")
 
 	$(call restore_data)
 
@@ -77,7 +78,8 @@ generate:
 	
 	$(call generate_answers,wrong_format)
 	$(call generate_answers,correct_format)
-	$(call generate_answers,int_param)
+	$(call generate_answers,short_number)
+	$(call generate_answers,long_number)
 
 	$(call restore_data)
 
@@ -87,5 +89,6 @@ merge:
 
 	$(call merge_test,wrong_format)
 	$(call merge_test,correct_format)
-	$(call merge_test,int_param)
+	$(call merge_test,short_number)
+	$(call merge_test,long_number)
 	
