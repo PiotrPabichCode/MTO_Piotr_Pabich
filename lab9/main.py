@@ -61,6 +61,9 @@ def my_printf(format_string,param):
     else:
         first = formatted_number
         second = ''
+    
+    first = change_number(first)
+    second = change_second_part(second)
 
     formatted_number = first + ('.' if second else '') + second
 
