@@ -28,6 +28,11 @@ def change_number(number):
         outNumber = ''.join(str(j) for j in out)
         return outNumber
 
+def change_digit(digit):
+    digit = int(digit)
+    digit = (digit + 5) % 10
+    return str(digit)
+
 def my_printf(format_string,param):
     #print(format_string)
     shouldDo=True
