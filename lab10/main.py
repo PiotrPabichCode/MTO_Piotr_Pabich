@@ -4,7 +4,7 @@ import sys
 
 def generate_new_number(old_number):
     new_num = int((old_number * 2) / len(str(old_number)))
-    if new % 2 == 0:
+    if new_num % 2 == 0:
         return str(new_num)
     return str(hex(new_num)).replace('0x', '')
 
