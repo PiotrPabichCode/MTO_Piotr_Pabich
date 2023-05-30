@@ -66,6 +66,7 @@ endef
 	
 	$(call perform_test,wrong_input,"Wrong input")
 	$(call perform_test,correct_decimal,"Correct decimal")
+	$(call perform_test,correct_hexadecimal,"Correct hexadecimal")
 
 	$(call restore_data)
 
@@ -76,6 +77,7 @@ generate:
 	
 	$(call generate_answers,wrong_input)
 	$(call generate_answers,correct_decimal)
+	$(call generate_answers,correct_hexadecimal)
 
 	$(call restore_data)
 
@@ -85,3 +87,4 @@ merge:
 
 	$(call merge_test,wrong_input)
 	$(call merge_test,correct_decimal)
+	$(call merge_test,correct_hexadecimal)
