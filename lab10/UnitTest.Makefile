@@ -65,6 +65,7 @@ endef
 	# perform_test,INPUT_FILE_NAME_WOUT_EXTENSION,TEST_NAME
 	
 	$(call perform_test,wrong_input,"Wrong input")
+	$(call perform_test,correct_decimal,"Correct decimal")
 
 	$(call restore_data)
 
@@ -74,6 +75,7 @@ generate:
 	# generate_output,INPUT_FILE_NAME_WOUT_EXTENSION
 	
 	$(call generate_answers,wrong_input)
+	$(call generate_answers,correct_decimal)
 
 	$(call restore_data)
 
@@ -82,3 +84,4 @@ merge:
 	-rm ./answers.txt 2>/dev/null
 
 	$(call merge_test,wrong_input)
+	$(call merge_test,correct_decimal)
