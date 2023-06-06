@@ -64,9 +64,10 @@ endef
 	
 	# perform_test,INPUT_FILE_NAME_WOUT_EXTENSION,TEST_NAME
 	
+	$(call perform_test,wrong_specifier,"Wrong specifier")
 	$(call perform_test,small_params,"Small integer values")
-	$(call perform_test,wrong_param,"Wrong parameter")
 	$(call perform_test,long_param,"Long parameter")
+	$(call perform_test,short_param,"Short parameter")
 
 	$(call restore_data)
 
@@ -75,9 +76,10 @@ generate:
 
 	# generate_output,INPUT_FILE_NAME_WOUT_EXTENSION
 	
+	$(call generate_answers,wrong_specifier)
 	$(call generate_answers,small_params)
-	$(call generate_answers,wrong_param)
 	$(call generate_answers,long_param)
+	$(call generate_answers,short_param)
 
 	$(call restore_data)
 
@@ -85,7 +87,8 @@ merge:
 	-rm ./input.txt 2>/dev/null
 	-rm ./answers.txt 2>/dev/null
 
+	$(call merge_test,wrong_specifier)
 	$(call merge_test,small_params)
-	$(call merge_test,wrong_param)
 	$(call merge_test,long_param)
+	$(call merge_test,short_param)
 
