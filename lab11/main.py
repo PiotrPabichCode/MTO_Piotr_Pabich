@@ -18,18 +18,15 @@ def convert_param(value):
     return out_s[::-1]
 
 def my_printf(format_string,param):
-    #print(format_string)
-    shouldDo=True
-    for idx in range(0,len(format_string)):
-        if shouldDo:
-            if format_string[idx] == '#' and format_string[idx+1] == 'k':
-                print(param,end="")
-                shouldDo=False
-            else:
-                print(format_string[idx],end="")
-        else:
-            shouldDo=True
-    print("")
+    match = re.search("#b", format_string)
+    if not match:
+        print(format_string)
+        return
+    
+    value = bin(int(param))[2:]
+    converted_value = convert_param(value)
+    out_s = format_string.replace(match.group(), converted_value)
+    print(out_s)
 
 data=sys.stdin.readlines()
 
