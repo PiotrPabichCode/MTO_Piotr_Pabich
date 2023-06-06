@@ -66,6 +66,7 @@ endef
 	
 	$(call perform_test,small_params,"Small integer values")
 	$(call perform_test,wrong_param,"Wrong parameter")
+	$(call perform_test,long_param,"Long parameter")
 
 	$(call restore_data)
 
@@ -76,6 +77,7 @@ generate:
 	
 	$(call generate_answers,small_params)
 	$(call generate_answers,wrong_param)
+	$(call generate_answers,long_param)
 
 	$(call restore_data)
 
@@ -85,4 +87,5 @@ merge:
 
 	$(call merge_test,small_params)
 	$(call merge_test,wrong_param)
+	$(call merge_test,long_param)
 
