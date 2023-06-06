@@ -10,7 +10,7 @@ def convert_param(value):
     value = value[::-1]
     pos = 0
     for i in value:
-        if x == '1':
+        if i == '1':
             output.append(look_up_table[pos%10])
         else:
             output.append('0')
