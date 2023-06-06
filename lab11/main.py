@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+import re
 
 look_up_table = ['a','b','c','d','e','f','g','h','i','j']
 
